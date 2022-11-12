@@ -1,0 +1,44 @@
+<!DOCTYPE HTML><html>
+<head>
+<title>B4m600-HeartRain</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="author" content="B4m600-南竺_QQ2656980584" />
+<link rel="shortcut icon" href="favicon.ico">
+</head>
+<style>
+@keyframes demo{
+	to{transform:translateY(3000px);}
+	}
+
+div{
+text-align:center;
+position:absolute;top:0;left:0;/*width:4%|;height:12%|7*/;
+border-radius:0px 0px 90px 90px;
+animation:demo 5s infinite linear;
+color:rgb(255,0,0);/*line-height:155px;*/font-size:30px;
+}
+</style>
+<body id=0 bgcolor=black>
+<div>
+</div>
+<script>
+//alert(document.body.clientWidth);
+/*use strick*/
+var width=document.body.clientWidth;console.log("Your width of screen:"+width);
+var n=250;var color=new Array("lime","cornflowerblue","mediumorchid","gold","coral");
+function choice(arr){return arr[parseInt(Math.random()*arr.length,10)]}
+const body=document.querySelector("body")
+for(var i=1;i<=n;i++){
+	const rain=document.createElement('div');
+	rain.innerHTML="&hearts;";
+	if(width<1000){rain.style.width="3.6%";rain.style.height="7%";rain.style.lineHeight="220px";}
+	else{rain.style.height="12%";rain.style.lineHeight="155px";};
+    rain.style.left+=Math.random()*body.offsetWidth+"px";
+    rain.style.animationDelay=Math.random()*-10+'s';/*负值取消前摇*/
+	rain.style.animationDuration=Math.random()*5+10+'s';
+	color1=choice(color);color2=choice(color);st0=`linear-gradient(200deg,transparent,${color1},tomato)`
+	rain.style.background=st0;
+	body.appendChild(rain);
+}
+</script>
+</body>
