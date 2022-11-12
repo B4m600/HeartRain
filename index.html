@@ -3,7 +3,7 @@
 <title>B4m600-HeartRain</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="author" content="B4m600-南竺_QQ2656980584" />
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="../Project-Rain/favicon.ico">
 </head>
 <style>
 @keyframes demo{
@@ -24,8 +24,9 @@ color:rgb(255,0,0);/*line-height:155px;*/font-size:30px;
 <script>
 //alert(document.body.clientWidth);
 /*use strick*/
-var width=document.body.clientWidth;console.log("Your width of screen:"+width);
-var n=250;var color=new Array("lime","cornflowerblue","mediumorchid","gold","coral");
+var width=document.body.clientWidth;console.log("Your width of screen:"+width);var n;
+if(width<1000){n=120}else(n=350);
+var color=new Array("cyan","cornflowerblue","orchid","orange","coral","pink","hotpink");
 function choice(arr){return arr[parseInt(Math.random()*arr.length,10)]}
 const body=document.querySelector("body")
 for(var i=1;i<=n;i++){
