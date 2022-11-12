@@ -18,7 +18,7 @@ animation:demo 5s infinite linear;
 color:rgb(255,0,0);/*line-height:155px;*/font-size:30px;
 }
 </style>
-<body id=0 bgcolor=black>
+<body id=0 style="background:linear-gradient(45deg,black,#ccc)">
 <div>
 </div>
 <script>
@@ -31,7 +31,7 @@ const body=document.querySelector("body")
 for(var i=1;i<=n;i++){
 	const rain=document.createElement('div');
 	rain.innerHTML="&hearts;";
-	if(width<1000){rain.style.width="3.6%";rain.style.height="7%";rain.style.lineHeight="220px";}
+	if(width<1000){rain.style.width="3.6%";rain.style.height="7%";rain.style.lineHeight="250px";}
 	else{rain.style.height="12%";rain.style.lineHeight="155px";};
     rain.style.left+=Math.random()*body.offsetWidth+"px";
     rain.style.animationDelay=Math.random()*-10+'s';/*负值取消前摇*/
